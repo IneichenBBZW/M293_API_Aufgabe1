@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Übung 1</title>
+  </head>
+  <body>
+    <h1>Beispiel: String.replace()</h1>
+    <p>Durch Klick auf den Button ersetzen Sie Teile der Zeichenkette.</p>
+    <p>vormals: <span id="before"></span></p>
+    <button type="button" onclick="onClick()">Los!</button>
+    <p>Neu: <span id="after"></span></p>
+    <script>
+      let name = "Elke Hinz";
+      document.getElementById("before").textContent = name;
+      document.querySelector("button").onclick = function () {
+        let newName = name.replace("Hinz", "Kunz, geb. Hinz");
+        document.getElementById("after").textContent = newName;
+      };
+    </script>
+  </body>
+</html>
